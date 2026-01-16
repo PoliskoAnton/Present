@@ -1,0 +1,10 @@
+/Users/antonwin/Downloads/birthday-gift-app /backend/src/main/java/com/birthday/giftapp/dto/RewardClaimResponse.java
+/Users/antonwin/Downloads/birthday-gift-app /backend/src/main/java/com/birthday/giftapp/dto/GameCompletionRequest.java
+/Users/antonwin/Downloads/birthday-gift-app /backend/src/main/java/com/birthday/giftapp/dto/GameProgressResponse.java
+/Users/antonwin/Downloads/birthday-gift-app /backend/src/main/java/com/birthday/giftapp/config/CorsConfig.java
+/Users/antonwin/Downloads/birthday-gift-app /backend/src/main/java/com/birthday/giftapp/controller/GameController.java
+/Users/antonwin/Downloads/birthday-gift-app /backend/src/main/java/com/birthday/giftapp/service/GameService.java
+/Users/antonwin/Downloads/birthday-gift-app /backend/src/main/java/com/birthday/giftapp/model/GameSession.java
+/Users/antonwin/Downloads/birthday-gift-app /backend/src/main/java/com/birthday/giftapp/BirthdayGiftApplication.java
+/Users/antonwin/Downloads/birthday-gift-app /backend/src/main/java/com/birthday/giftapp/repository/GameSessionRepository.java
+/Users/antonwin/Downloads/birthday-gift-app /backend/src/main/java/com/birthday/giftapp/dto/RewardClaimRequest.java

@@ -1,0 +1,163 @@
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  text-align: center;
+  z-index: 2;
+}
+
+.birthday-title {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 20px var(--shadow);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.gift-container {
+  margin: 3rem 0;
+  position: relative;
+}
+
+.gift-box {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gift-top {
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: 15px 15px 5px 5px;
+  position: relative;
+  box-shadow: 0 10px 40px var(--shadow-heavy);
+  z-index: 2;
+}
+
+.gift-bottom {
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(135deg, var(--secondary) 0%, #FFB347 100%);
+  border-radius: 5px 5px 15px 15px;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0 15px 50px var(--shadow-heavy);
+}
+
+.gift-ribbon-horizontal {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(180deg, #FFD700 0%, #FFA500 100%);
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
+}
+
+.gift-ribbon-vertical {
+  position: absolute;
+  width: 30px;
+  height: 250px;
+  background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
+  z-index: 3;
+}
+
+.gift-bow {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  z-index: 4;
+  filter: drop-shadow(0 4px 10px rgba(255, 107, 157, 0.4));
+  animation: bowBounce 2s ease-in-out infinite;
+}
+
+@keyframes bowBounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px) rotate(5deg);
+  }
+}
+
+.gift-sparkle {
+  position: absolute;
+  font-size: 2rem;
+  top: -30px;
+  right: -30px;
+  z-index: 5;
+}
+
+.instruction {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.decoration-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-confetti {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .birthday-title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .gift-box {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .gift-ribbon-vertical {
+    height: 200px;
+  }
+  
+  .instruction {
+    font-size: 1.1rem;
+  }
+}

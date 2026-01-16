@@ -1,0 +1,113 @@
+.tic-tac-toe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  text-shadow: 2px 2px 4px var(--shadow);
+}
+
+.game-instruction {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-weight: 600;
+  min-height: 40px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 2rem;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px var(--shadow);
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #FFF 0%, #FFF5F7 100%);
+  border: 3px solid var(--primary);
+  border-radius: 15px;
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, #FFE6F0 100%);
+  box-shadow: 0 5px 20px var(--shadow);
+  transform: translateY(-2px);
+}
+
+.cell:disabled {
+  cursor: not-allowed;
+}
+
+.cell.X {
+  color: var(--primary);
+}
+
+.cell.O {
+  color: var(--accent);
+}
+
+.cell.winning {
+  background: linear-gradient(135deg, var(--secondary) 0%, #FFE066 100%);
+  animation: winningPulse 0.8s ease-in-out;
+}
+
+@keyframes winningPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.reset-btn {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0 5px 20px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  box-shadow: 0 8px 30px var(--shadow-heavy);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .game-title {
+    font-size: 2rem;
+  }
+  
+  .board {
+    gap: 10px;
+    padding: 15px;
+  }
+  
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+  }
+}
